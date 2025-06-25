@@ -8,7 +8,10 @@ def home():
     print("hello")
     return render_template('index.html')
 
-# Required for Vercel serverless handler
-def handler(environ, start_response):
-    print("hey")
-    return app.wsgi_app(environ, start_response)
+# # Required for Vercel serverless handler
+# def handler(environ, start_response):
+#     print("hey")
+#     return app.wsgi_app(environ, start_response)
+
+if __name__=='__main__':
+    app.run(debug=True)
