@@ -4,11 +4,14 @@ import os
 # Tell Flask where to find templates and static files
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
+
 @app.route('/')
 def home():
-    print("Current directory:", os.getcwd())
-    print("Files here:", os.listdir('.'))
-    print("Templates folder:", os.listdir('./templates') if os.path.exists('./templates') else 'templates not found')
+    try:
+        print("Current dir:", os.getcwd())
+        print("Templates content:", os.listdir('./templates'))
+    except Exception as e:
+        print("Error:", e)
     return render_template('index.html')
 
 

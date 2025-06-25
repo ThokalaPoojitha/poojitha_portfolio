@@ -6,6 +6,5 @@
   },
   "rewrites": [
     { "source": "/", "destination": "/api/index.py" }
-  ],
-  "includeFiles": ["api/templates/**"]
+  ]
 }
