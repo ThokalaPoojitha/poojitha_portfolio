@@ -1,1 +1,32 @@
-/* Custom styles */
+/* Add soft background gradients */
+body {
+  background: linear-gradient(to bottom right, #f3f4f6, #ffffff);
+}
+
+/* Fancy underline for section titles */
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #6366f1;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Card hover effect */
+.shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Animate profile image on hover */
+img:hover {
+  transform: scale(1.05);
+  transition: 0.4s ease;
+}

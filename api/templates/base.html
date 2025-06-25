@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
 </head>
 <body class="bg-gray-100 text-gray-900 font-sans">
 
@@ -30,9 +36,9 @@
   </main>
 
   <!-- Footer -->
-  <footer class="p-4 bg-white mt-10 text-center text-sm text-gray-600">
-    © 2025 Poojitha. All rights reserved.
-  </footer>
+  <footer class="p-4 bg-white mt-10 text-center text-sm text-gray-600 hover:text-indigo-600 transition-all duration-300">
+  © 2025 Poojitha. All rights reserved.
+</footer>
 
   <script>
     ScrollReveal().reveal('.reveal', {
