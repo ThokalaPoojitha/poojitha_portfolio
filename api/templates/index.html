@@ -3,7 +3,7 @@
 {% block content %}
 
 <!-- Hero -->
- <section class="text-center py-24 bg-gradient-to-r from-rose-100 via-sky-100 to-teal-100 text-gray-800 reveal">
+ <section class="text-center py-24 bg-gradient-to-r from-teal-100 via-white to-blue-100 text-gray-900 reveal">
   <h1 class="text-5xl font-extrabold animate__animated animate__fadeInDown animate__delay-1s">Hi, I'm Poojitha 👋</h1>
   <p class="text-xl text-gray-300 mt-4 animate__animated animate__fadeInUp">
     Platform Engineer | Cloud Enthusiast | Terraform Fan | AWS Addict
@@ -11,8 +11,8 @@
 </section>
 
 <!-- About Me -->
-<section class="py-12 reveal">
-  <h2 class="text-3xl font-bold mb-4">About Me</h2>
+<section class="py-12 reveal bg-white">
+  <h2 class="text-3xl font-bold mb-4 border-b-4 border-teal-400 inline-block text-gray-800">About Me</h2>
   <div class="flex flex-col md:flex-row items-center gap-6">
     <img src="{{ url_for('static', filename='css/images/profile.jpg') }}"
      alt="Poojitha"
@@ -26,10 +26,9 @@
   </div>
 </section>
 
-
 <!-- Skills -->
-<section class="py-12 reveal">
-  <h2 class="text-3xl font-bold mb-6">Tech Stack</h2>
+<section class="py-12 reveal bg-teal-50">
+  <h2 class="text-3xl font-bold mb-6 border-b-4 border-teal-400 inline-block text-gray-800">Tech Stack</h2>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-800">
     <div class="bg-white p-4 rounded shadow">AWS (EC2, S3, Lambda, RDS, ECS)</div>
     <div class="bg-white p-4 rounded shadow">Terraform, CloudFormation, CDK</div>
@@ -41,8 +40,8 @@
 </section>
 
 <!-- Experience -->
-<section class="py-12 reveal">
-  <h2 class="text-3xl font-bold mb-6">Experience</h2>
+<section class="py-12 reveal bg-white">
+  <h2 class="text-3xl font-bold mb-6 border-b-4 border-teal-400 inline-block text-gray-800">Experience</h2>
   <div class="space-y-6">
     <div class="p-4 bg-white rounded shadow">
       <h3 class="font-semibold text-xl">Customer Service Manager – Ladbrokes, Dublin</h3>
@@ -64,7 +63,7 @@
 
 <!-- Projects -->
 <section class="py-12 reveal">
-  <h2 class="text-3xl font-bold mb-6">Projects</h2>
+  <h2 class="text-3xl font-bold mb-6 border-b-4 border-teal-400 inline-block text-gray-800">Projects</h2>
   <div class="grid md:grid-cols-2 gap-6">
     <div class="bg-white p-4 rounded shadow">
       <h3 class="text-lg font-bold">AWS Cloud Web App</h3>
@@ -87,7 +86,7 @@
 
 <!-- Certifications -->
 <section class="py-12 reveal">
-  <h2 class="text-3xl font-bold mb-6">Certifications</h2>
+  <h2 class="text-3xl font-bold mb-6 border-b-4 border-teal-400 inline-block text-gray-800">Certifications</h2>
   <ul class="list-disc ml-6 text-gray-800">
     <li>AWS Certified Solutions Architect – Associate</li>
     <li>HashiCorp Certified Terraform Associate</li>
