@@ -1,15 +1,18 @@
 from flask import Flask, render_template
 import os
-# Get absolute paths relative to this file's directory
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
-app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
+# Tell Flask where to find templates and static files
+app = Flask(__name__, template_folder='templates', static_folder='static')
 
 @app.route('/')
 def home():
-    return render_template('index.html')  # or 'index.html' if you want
+    return render_template('index.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Optional: add a health check
+@app.route('/health')
+def health():
+    return 'OK', 200
+
+# Needed for Vercel handler
+def handler(environ, start_response):
+    return app(environ, start_response)
