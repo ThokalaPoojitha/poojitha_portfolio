@@ -35,3 +35,6 @@ section h2 {
   color: #2d2d2d; /* Dark gray text */
   border-color: #81e6d9; /* Light teal border */
 }
+html {
+  scroll-behavior: smooth;
+}
