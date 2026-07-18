@@ -1,15 +1,40 @@
 {% extends 'base.html' %}
-{% block title %}Projects - My Portfolio{% endblock %}
+{% block title %}Projects | Poojitha Thokala{% endblock %}
 {% block content %}
-<h1 class="text-3xl font-semibold mb-4">Projects</h1>
-<div class="grid md:grid-cols-2 gap-6">
-    <div class="p-4 bg-white shadow rounded">
-        <h2 class="text-xl font-bold">Cloud Automation with Terraform</h2>
-        <p>Automated infrastructure on AWS using Terraform, including CI/CD pipelines and monitoring.</p>
+
+<section class="pt-16 pb-14 reveal">
+  <p class="section-label mb-3">// projects.list</p>
+  <h1 class="font-display text-3xl font-bold mb-8" style="color: var(--text-primary);">Projects</h1>
+
+  <div class="grid md:grid-cols-2 gap-5">
+    <div class="card p-5">
+      <h2 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">Cloud Automation with Terraform</h2>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Automated infrastructure on AWS using Terraform, including CI/CD pipelines and monitoring for
+        repeatable, version-controlled deployments.
+      </p>
     </div>
-    <div class="p-4 bg-white shadow rounded">
-        <h2 class="text-xl font-bold">Multi-cloud Monitoring Dashboard</h2>
-        <p>Unified dashboard using Prometheus, Grafana for AWS, Azure, GCP metrics.</p>
+    <div class="card p-5">
+      <h2 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">Multi-Cloud Monitoring Dashboard</h2>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Built a unified dashboard using Prometheus and Grafana to track metrics across AWS, Azure, and GCP
+        from a single pane of glass.
+      </p>
     </div>
-</div>
+    <div class="card p-5">
+      <h2 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">Cloud Websites: Dog Adoption &amp; Electricity Provider</h2>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Designed and built two websites — one for street dog adoption, one for an electricity provider —
+        with backends configured entirely on AWS via CI/CD and Infrastructure as Code.
+      </p>
+    </div>
+    <div class="card p-5">
+      <h2 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">Blockchain E-Commerce DApp</h2>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Deployed a decentralized scarf-selling application onto a blockchain network and AWS Elastic Beanstalk.
+      </p>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
