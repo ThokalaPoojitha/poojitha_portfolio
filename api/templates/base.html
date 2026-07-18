@@ -3,52 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}My Portfolio{% endblock %}</title>
+  <title>{% block title %}Poojitha Thokala | Cloud Platform Engineer{% endblock %}</title>
+  <meta name="description" content="Poojitha Thokala — Cloud Platform / DevOps Engineer specializing in AWS, Kubernetes, and infrastructure automation." />
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script src="https://unpkg.com/scrollreveal"></script>
+
   <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
+    :root {
+      --bg: #0B1120;
+      --surface: #121B2E;
+      --surface-hover: #17223A;
+      --border: #223049;
+      --text-primary: #E7ECF3;
+      --text-muted: #93A2BC;
+      --accent: #2DD4BF;
+      --accent-soft: rgba(45, 212, 191, 0.12);
+      --accent-2: #38BDF8;
+      --status: #4ADE80;
+    }
 
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      background-image:
+        linear-gradient(rgba(45, 212, 191, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45, 212, 191, 0.055) 1px, transparent 1px);
+      background-size: 42px 42px;
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      background: var(--status);
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+      animation: pulse-status 2s infinite;
+    }
+    @keyframes pulse-status {
+      0%   { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
+      70%  { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .card:hover {
+      border-color: rgba(45, 212, 191, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .pill {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(45, 212, 191, 0.25);
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover { color: var(--text-primary); }
+
+    a.link-accent {
+      color: var(--accent-2);
+    }
+    a.link-accent:hover { color: var(--accent); }
+
+    ::selection { background: rgba(45, 212, 191, 0.3); }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-
+<body>
   <!-- Navigation -->
-  <nav class="p-4 bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
-      <a href="/" class="text-2xl font-extrabold text-indigo-600">Poojitha</a>
-      <div class="space-x-4 text-gray-700 font-medium">
-        <a href="/" class="hover:text-indigo-600 transition">Home</a>
-        <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
-
-        <!-- <a href="/projects" class="hover:text-indigo-600 transition">Projects</a> -->
-        <!-- <a href="/about" class="hover:text-indigo-600 transition">About</a>
-        <a href="/contact" class="hover:text-indigo-600 transition">Contact</a> -->
+  <nav class="sticky top-0 z-50" style="background: rgba(11, 17, 32, 0.85); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border);">
+    <div class="max-w-5xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="/" class="font-display font-bold text-lg tracking-tight" style="color: var(--text-primary);">
+        Poojitha<span style="color: var(--accent);">.</span>dev
+      </a>
+      <div class="space-x-6 font-mono text-sm hidden sm:flex">
+        <a href="/#about" class="nav-link">about</a>
+        <a href="/#experience" class="nav-link">experience</a>
+        <a href="/#projects" class="nav-link">projects</a>
+        <a href="/#contact" class="nav-link">contact</a>
       </div>
     </div>
   </nav>
 
   <!-- Main Content -->
-  <main class="max-w-6xl mx-auto p-6">
+  <main class="max-w-5xl mx-auto px-6">
     {% block content %}{% endblock %}
   </main>
 
   <!-- Footer -->
-  <footer class="p-4 bg-white mt-10 text-center text-sm text-gray-600 hover:text-indigo-600 transition-all duration-300">
-  © 2025 Poojitha. All rights reserved.
-</footer>
+  <footer class="mt-20 py-8 text-center font-mono text-xs" style="border-top: 1px solid var(--border); color: var(--text-muted);">
+    <span class="status-dot mr-2"></span>system_status: available for opportunities &nbsp;·&nbsp; © 2026 Poojitha Thokala
+  </footer>
 
   <script>
     ScrollReveal().reveal('.reveal', {
-      distance: '40px',
-      duration: 1000,
+      distance: '30px',
+      duration: 800,
       easing: 'ease-in-out',
       origin: 'bottom',
-      interval: 200
+      interval: 120
     });
   </script>
 </body>
