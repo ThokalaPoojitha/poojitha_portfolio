@@ -7,10 +7,13 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 def home():
     return render_template('index.html')
 
-# # Required for Vercel serverless handler
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
+# Required for Vercel serverless handler
 # def handler(environ, start_response):
-#     print("hey")
 #     return app.wsgi_app(environ, start_response)
 
-if __name__=='__main__':
+if __name__ == '__main__':
     app.run(debug=True)
