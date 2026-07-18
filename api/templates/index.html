@@ -1,106 +1,283 @@
 {% extends 'base.html' %}
-{% block title %}Poojitha Thokala - Cloud Platform Engineer{% endblock %}
+{% block title %}Poojitha Thokala | Cloud Platform Engineer{% endblock %}
 {% block content %}
 
 <!-- Hero -->
- <section class="text-center py-24 bg-gradient-to-r from-teal-100 via-white to-blue-100 text-gray-900 reveal">
-  <h1 class="text-5xl font-extrabold animate__animated animate__fadeInDown animate__delay-1s">Hi, I'm Poojitha 👋</h1>
-  <p class="text-xl text-gray-300 mt-4 animate__animated animate__fadeInUp">
-    Platform Engineer | Cloud Enthusiast | Terraform Fan | AWS Addict
+<section class="pt-20 pb-16 reveal">
+  <p class="section-label mb-4">// cloud_platform_engineer.profile</p>
+  <h1 class="font-display text-4xl sm:text-5xl font-bold leading-tight" style="color: var(--text-primary);">
+    Hi, I'm Poojitha.
+    <br>
+    <span style="color: var(--accent);">I keep cloud platforms running.</span>
+  </h1>
+  <p class="mt-5 max-w-2xl text-lg" style="color: var(--text-muted);">
+    Cloud Platform / DevOps Engineer with 3+ years building, automating, and supporting reliable
+    infrastructure across AWS, Azure, and GCP — from Infrastructure as Code to incident response.
   </p>
+
+  <div class="mt-6 flex flex-wrap gap-3">
+    <a href="mailto:poojithathokala300@gmail.com" class="pill hover:opacity-80">✉ poojithathokala300@gmail.com</a>
+    <a href="tel:+353874856011" class="pill hover:opacity-80">☎ +353 87 485 6011</a>
+    <span class="pill">📍 Dublin, Ireland</span>
+  </div>
+
+  <!-- Signature element: status panel -->
+  <div class="card mt-10 p-5">
+    <div class="flex items-center gap-2 mb-4 font-mono text-xs" style="color: var(--text-muted);">
+      <span class="status-dot"></span> live_status.json
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono">
+      <div>
+        <div class="text-2xl font-semibold" style="color: var(--accent);">3+</div>
+        <div class="text-xs" style="color: var(--text-muted);">years experience</div>
+      </div>
+      <div>
+        <div class="text-2xl font-semibold" style="color: var(--accent);">3</div>
+        <div class="text-xs" style="color: var(--text-muted);">clouds (AWS/Azure/GCP)</div>
+      </div>
+      <div>
+        <div class="text-2xl font-semibold" style="color: var(--accent);">5-7/day</div>
+        <div class="text-xs" style="color: var(--text-muted);">prod incidents triaged</div>
+      </div>
+      <div>
+        <div class="text-2xl font-semibold" style="color: var(--accent);">2</div>
+        <div class="text-xs" style="color: var(--text-muted);">certifications held</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- About Me -->
-<section class="py-12 reveal bg-white">
-  <h2 class="text-3xl font-bold mb-4 border-b-4 border-teal-400 inline-block text-gray-800">About Me</h2>
-  <div class="flex flex-col md:flex-row items-center gap-6">
+<!-- About -->
+<section id="about" class="py-14 reveal">
+  <p class="section-label mb-3">01 · about</p>
+  <div class="flex flex-col sm:flex-row items-start gap-6">
     <img src="{{ url_for('static', filename='css/images/profile.jpg') }}"
-     alt="Poojitha"
-     class="w-40 h-40 mx-auto rounded-full shadow-lg border-4 border-white object-cover">
-    <!-- <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Poojitha Thokala" class="w-48 h-48 rounded-full shadow-lg border-4 border-indigo-500 object-cover animate__animated animate__fadeInLeft"> -->
-    <p class="text-gray-700 leading-relaxed max-w-3xl animate__animated animate__fadeInRight">
-      I'm a Platform Engineer with 3 years of experience specializing in automating and scaling cloud infrastructure
-      on AWS, Azure, and GCP. I’ve worked on Infrastructure as Code with Terraform, CFT, CDK, built web apps hosted in the cloud,
-      and helped teams ship faster with CI/CD. My strength lies in making cloud simple, secure, and reliable.
+         alt="Poojitha Thokala"
+         class="profile-photo w-32 h-32 rounded-full object-cover flex-shrink-0"
+         style="border: 2px solid var(--border);">
+    <p class="leading-relaxed max-w-2xl" style="color: var(--text-primary);">
+      I specialize in automating and scaling cloud infrastructure on AWS, Azure, and GCP —
+      Infrastructure as Code with Terraform, Kubernetes, and CI/CD pipelines, plus the operational
+      side: incident triage, root cause analysis, and production support in 24x7 environments.
+      I care about making cloud platforms simple, secure, and reliable — and about being the person
+      on-call trusts to actually fix things fast.
     </p>
   </div>
 </section>
 
 <!-- Skills -->
-<section class="py-12 reveal bg-teal-50">
-  <h2 class="text-3xl font-bold mb-6 border-b-4 border-teal-400 inline-block text-gray-800">Tech Stack</h2>
-  <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-800">
-    <div class="bg-white p-4 rounded shadow">AWS (EC2, S3, Lambda, RDS, ECS)</div>
-    <div class="bg-white p-4 rounded shadow">Terraform, CloudFormation, CDK</div>
-    <div class="bg-white p-4 rounded shadow">Python, Shell, SQL</div>
-    <div class="bg-white p-4 rounded shadow">CI/CD: Jenkins, GitHub Actions</div>
-    <div class="bg-white p-4 rounded shadow">Kubernetes, Docker</div>
-    <div class="bg-white p-4 rounded shadow">Monitoring: CloudWatch, Prometheus, Grafana</div>
+<section id="skills" class="py-14 reveal">
+  <p class="section-label mb-3">02 · tech_stack</p>
+  <h2 class="font-display text-2xl font-bold mb-6" style="color: var(--text-primary);">Skills &amp; Tools</h2>
+
+  <div class="grid sm:grid-cols-2 gap-5">
+    <div class="card p-5">
+      <h3 class="font-mono text-sm mb-3" style="color: var(--accent-2);">AWS — Compute &amp; Storage</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="pill">EC2</span><span class="pill">Lambda</span><span class="pill">ECS</span>
+        <span class="pill">Elastic Beanstalk</span><span class="pill">S3</span><span class="pill">EFS</span>
+        <span class="pill">FSx</span>
+      </div>
+    </div>
+    <div class="card p-5">
+      <h3 class="font-mono text-sm mb-3" style="color: var(--accent-2);">AWS — Data &amp; Networking</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="pill">RDS</span><span class="pill">DynamoDB</span><span class="pill">Redshift</span>
+        <span class="pill">Aurora</span><span class="pill">VPC</span><span class="pill">Route 53</span>
+        <span class="pill">ALB / NLB</span><span class="pill">CloudFront</span><span class="pill">API Gateway</span>
+      </div>
+    </div>
+    <div class="card p-5">
+      <h3 class="font-mono text-sm mb-3" style="color: var(--accent-2);">AWS — Security, Identity &amp; Ops</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="pill">IAM</span><span class="pill">Cognito</span><span class="pill">SSO</span>
+        <span class="pill">CloudWatch</span><span class="pill">CloudTrail</span><span class="pill">GuardDuty</span>
+        <span class="pill">Control Tower</span><span class="pill">AWS Organizations</span>
+        <span class="pill">Kinesis Firehose</span><span class="pill">Glue</span><span class="pill">Step Functions</span>
+        <span class="pill">SNS/SQS/SES</span>
+      </div>
+    </div>
+    <div class="card p-5">
+      <h3 class="font-mono text-sm mb-3" style="color: var(--accent-2);">Languages, CI/CD &amp; Platforms</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="pill">Python</span><span class="pill">Shell</span><span class="pill">SQL</span>
+        <span class="pill">Terraform</span><span class="pill">Kubernetes</span><span class="pill">Docker</span>
+        <span class="pill">Ansible</span><span class="pill">Jenkins</span><span class="pill">GitHub Actions</span>
+        <span class="pill">GitLab CI/CD</span><span class="pill">AWS CodePipeline</span><span class="pill">Boto3</span>
+        <span class="pill">Datadog</span><span class="pill">Azure</span><span class="pill">GCP</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Experience -->
-<section class="py-12 reveal bg-white">
-  <h2 class="text-3xl font-bold mb-6 border-b-4 border-teal-400 inline-block text-gray-800">Experience</h2>
-  <div class="space-y-6">
-    <div class="p-4 bg-white rounded shadow">
-      <h3 class="font-semibold text-xl">Customer Service Manager – Ladbrokes, Dublin</h3>
-      <p class="text-sm text-gray-600">Feb 2025 – Present</p>
-      <p>Handled daily operations, tech escalations, and system improvements in a high-volume customer environment.</p>
+<section id="experience" class="py-14 reveal">
+  <p class="section-label mb-3">03 · experience</p>
+  <h2 class="font-display text-2xl font-bold mb-6" style="color: var(--text-primary);">Work Experience</h2>
+
+  <div class="space-y-5">
+    <div class="card p-5">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="font-display font-semibold text-lg" style="color: var(--text-primary);">Cloud Platform Support Engineer III</h3>
+        <span class="font-mono text-xs pill">Nov 2025 – Present</span>
+      </div>
+      <p class="text-sm mb-3" style="color: var(--accent-2);">Guidewire Software, Dublin</p>
+      <ul class="list-disc ml-5 space-y-1.5 text-sm" style="color: var(--text-muted);">
+        <li>Operate and maintain the Guidewire Cloud Platform (GWCP) across AWS infrastructure — containerized workloads, networking, and CI/CD pipelines — for enterprise insurance clients globally.</li>
+        <li>Drive incident triage and root cause analysis for 5–7 production cases daily, including SEV1 incidents, resolving issues within minutes to hours across a 24x7 follow-the-sun support model.</li>
+        <li>Proactively monitor application and infrastructure health with Datadog, analyzing metrics and alerts to catch anomalies before they escalate.</li>
+        <li>Partner with platform engineering and SRE teams on complex GWCP/AWS integrations, owning runbooks and post-incident reports that drive down MTTR.</li>
+      </ul>
     </div>
-    <div class="p-4 bg-white rounded shadow">
-      <h3 class="font-semibold text-xl">Platform Engineer – Quantiphi, India</h3>
-      <p class="text-sm text-gray-600">Dec 2021 – Aug 2023</p>
-      <p>Built scalable cloud infrastructure with Terraform, automated deployments, developed cloud-native apps, and maintained multi-account AWS organizations.</p>
+
+    <div class="card p-5">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="font-display font-semibold text-lg" style="color: var(--text-primary);">Lab Assistant, Cloud Machine Learning</h3>
+        <span class="font-mono text-xs pill">Jun 2024 – Feb 2025</span>
+      </div>
+      <p class="text-sm mb-3" style="color: var(--accent-2);">National College of Ireland, Dublin</p>
+      <ul class="list-disc ml-5 space-y-1.5 text-sm" style="color: var(--text-muted);">
+        <li>Mentored postgraduate students applying ML concepts on cloud platforms through hands-on lab sessions.</li>
+        <li>Built simplified walkthroughs and personalized support strategies, helping students confidently deploy and scale cloud-based ML solutions.</li>
+      </ul>
     </div>
-    <div class="p-4 bg-white rounded shadow">
-      <h3 class="font-semibold text-xl">Lab Assistant – National College of Ireland</h3>
-      <p class="text-sm text-gray-600">Jun 2024 – Feb 2025</p>
-      <p>Assisted students in deploying ML models on cloud and guided them through real-world architecture challenges.</p>
+
+    <div class="card p-5">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="font-display font-semibold text-lg" style="color: var(--text-primary);">Framework / Platform Engineer</h3>
+        <span class="font-mono text-xs pill">Dec 2021 – Aug 2023</span>
+      </div>
+      <p class="text-sm mb-3" style="color: var(--accent-2);">Quantiphi Analytics Solutions Limited, India</p>
+      <ul class="list-disc ml-5 space-y-1.5 text-sm" style="color: var(--text-muted);">
+        <li>Designed and maintained highly available, scalable cloud infrastructure for compute, storage, networking, and security using AWS and Infrastructure as Code.</li>
+        <li>Automated infrastructure and application deployments with Terraform, Kubernetes, and CI/CD — cutting provisioning time by roughly 60%.</li>
+        <li>Built and deployed containerized applications for a content streaming platform using Docker, ECS, ECR, and EKS.</li>
+        <li>Designed AWS Organizations structure and networking across created and migrated accounts.</li>
+        <li>Recognized internally as "Dedication Personified" and awarded the "Avengers Award" for top contribution on the AWS team.</li>
+      </ul>
+    </div>
+
+    <div class="card p-5">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="font-display font-semibold text-lg" style="color: var(--text-primary);">Framework Engineer Intern</h3>
+        <span class="font-mono text-xs pill">Aug 2021 – Dec 2021</span>
+      </div>
+      <p class="text-sm mb-3" style="color: var(--accent-2);">Quantiphi Analytics Solutions Limited, India</p>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Built and deployed a full website backend on AWS — Cognito, ELB, EC2, API Gateway, Lambda, S3, RDS, SNS, and SES
+        — implementing authentication, data storage, and email/SMS notifications via managed AWS services.
+      </p>
+    </div>
+
+    <div class="card p-5">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="font-display font-semibold text-lg" style="color: var(--text-primary);">Web Designing Intern</h3>
+        <span class="font-mono text-xs pill">Jun 2019 – Sep 2019</span>
+      </div>
+      <p class="text-sm mb-3" style="color: var(--accent-2);">Kaashiv Infotech, India</p>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Built a responsive, mobile-first web application with HTML5, CSS3, and JS using Flexbox and media queries,
+        with interactive forms and navigation. Deployed via GitHub Pages.
+      </p>
+    </div>
+
+    <div class="card p-5">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 class="font-display font-semibold text-lg" style="color: var(--text-primary);">Android App Development Intern</h3>
+        <span class="font-mono text-xs pill">Jan 2020 – Mar 2020</span>
+      </div>
+      <p class="text-sm mb-3" style="color: var(--accent-2);">MyCaptain</p>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Developed an Android app giving students digital access to library resources, modernizing the book search process.
+      </p>
     </div>
   </div>
 </section>
 
 <!-- Projects -->
- <section id="projects" class="py-12 reveal">
-  <h2 class="text-3xl font-bold mb-6 border-b-4 border-teal-400 inline-block text-gray-800">Projects</h2>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white p-4 rounded shadow">
-      <h3 class="text-lg font-bold">AWS Cloud Web App</h3>
-      <p>Full-stack app built with React, Python + Spark backend, deployed on AWS with container orchestration.</p>
+<section id="projects" class="py-14 reveal">
+  <p class="section-label mb-3">04 · projects</p>
+  <h2 class="font-display text-2xl font-bold mb-6" style="color: var(--text-primary);">Projects</h2>
+  <div class="grid md:grid-cols-2 gap-5">
+    <div class="card p-5">
+      <h3 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">Cloud Websites: Dog Adoption &amp; Electricity Provider</h3>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Designed and built two websites — one for street dog adoption, one for an electricity provider —
+        with backends configured entirely on AWS, deployed via CI/CD pipelines and Infrastructure as Code.
+      </p>
     </div>
-    <div class="bg-white p-4 rounded shadow">
-      <h3 class="text-lg font-bold">Blockchain E-commerce DApp</h3>
-      <p>Decentralized application for scarf sales with Web3 tech, deployed via Elastic Beanstalk on AWS.</p>
+    <div class="card p-5">
+      <h3 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">Blockchain E-Commerce DApp</h3>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Deployed a decentralized scarf-selling application onto a blockchain network and AWS Elastic Beanstalk,
+        using its deployment, load balancing, and scaling capabilities.
+      </p>
     </div>
-    <div class="bg-white p-4 rounded shadow">
-      <h3 class="text-lg font-bold">Dog Adoption Platform</h3>
-      <p>Developed a dog adoption portal hosted fully on AWS with automated pipeline and secure architecture.</p>
+    <div class="card p-5">
+      <h3 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">Stack Overflow Tag Prediction</h3>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Predicted and categorized Stack Overflow question tags using SGD Classifier and Logistic Regression
+        with a One-vs-Rest strategy.
+      </p>
     </div>
-    <div class="bg-white p-4 rounded shadow">
-      <h3 class="text-lg font-bold">Stack Overflow Tag Predictor</h3>
-      <p>Used ML algorithms to predict tags for developer questions — built using logistic regression and LSTM.</p>
+    <div class="card p-5">
+      <h3 class="font-display font-semibold text-lg mb-2" style="color: var(--text-primary);">Wind Speed &amp; Direction Prediction (Dublin Airport)</h3>
+      <p class="text-sm" style="color: var(--text-muted);">
+        Built an LSTM model to predict wind speed and direction at Dublin Airport from historical weather data.
+      </p>
     </div>
   </div>
 </section>
 
 <!-- Certifications -->
-<section class="py-12 reveal">
-  <h2 class="text-3xl font-bold mb-6 border-b-4 border-teal-400 inline-block text-gray-800">Certifications</h2>
-  <ul class="list-disc ml-6 text-gray-800">
-    <li>AWS Certified Solutions Architect – Associate</li>
-    <li>HashiCorp Certified Terraform Associate</li>
-    <li>CKAD (in progress)</li>
-    <li>AWS Solutions Architect – Professional (in progress)</li>
-    <li>Python, Java, .NET, Operating Systems – Various Platforms</li>
-  </ul>
+<section class="py-14 reveal">
+  <p class="section-label mb-3">05 · certifications</p>
+  <h2 class="font-display text-2xl font-bold mb-6" style="color: var(--text-primary);">Certifications</h2>
+  <div class="flex flex-wrap gap-2">
+    <span class="pill">AWS Certified Solutions Architect – Associate</span>
+    <span class="pill">HashiCorp Certified Terraform Associate</span>
+    <span class="pill">CKAD (in progress)</span>
+    <span class="pill">AWS Solutions Architect – Professional (in progress)</span>
+    <span class="pill">Computer Organization &amp; Architecture — NPTEL</span>
+    <span class="pill">Operating Systems — NPTEL</span>
+  </div>
+</section>
+
+<!-- Education -->
+<section class="py-14 reveal">
+  <p class="section-label mb-3">06 · education</p>
+  <h2 class="font-display text-2xl font-bold mb-6" style="color: var(--text-primary);">Education</h2>
+  <div class="space-y-4">
+    <div class="card p-5 flex flex-wrap items-baseline justify-between gap-2">
+      <div>
+        <h3 class="font-display font-semibold" style="color: var(--text-primary);">M.Sc. Cloud Computing</h3>
+        <p class="text-sm" style="color: var(--accent-2);">National College of Ireland, Dublin — 2:1 Honours</p>
+      </div>
+      <span class="font-mono text-xs pill">2025</span>
+    </div>
+    <div class="card p-5 flex flex-wrap items-baseline justify-between gap-2">
+      <div>
+        <h3 class="font-display font-semibold" style="color: var(--text-primary);">B.Tech Computer Science Engineering</h3>
+        <p class="text-sm" style="color: var(--accent-2);">MITS, Andhra Pradesh, India — CGPA 9.01/10</p>
+      </div>
+      <span class="font-mono text-xs pill">2021</span>
+    </div>
+  </div>
 </section>
 
 <!-- Contact -->
-<section class="py-12 reveal">
-  <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-  <p class="mb-2">📧 <a href="mailto:pooojithanarasimhulu210@gmail.com" class="text-indigo-600 hover:underline">pooojithanarasimhulu210@gmail.com</a></p>
-  <p class="mb-2">🔗 <a href="https://linkedin.com/in/poojitha-narasimhulu" class="text-indigo-600 hover:underline">LinkedIn</a></p>
-  <p>🌍 Dublin, Ireland</p>
+<section id="contact" class="py-14 reveal">
+  <p class="section-label mb-3">07 · contact</p>
+  <h2 class="font-display text-2xl font-bold mb-4" style="color: var(--text-primary);">Let's talk</h2>
+  <p class="mb-5 max-w-xl" style="color: var(--text-muted);">
+    Open to Cloud Platform, DevOps, and SRE roles. The fastest way to reach me is email.
+  </p>
+  <div class="flex flex-wrap gap-3">
+    <a href="mailto:poojithathokala300@gmail.com" class="pill hover:opacity-80">✉ poojithathokala300@gmail.com</a>
+    <a href="tel:+353874856011" class="pill hover:opacity-80">☎ +353 87 485 6011</a>
+    <a href="#" class="pill hover:opacity-80">🔗 LinkedIn</a>
+    <span class="pill">📍 Dublin, Ireland</span>
+  </div>
 </section>
+
 {% endblock %}
